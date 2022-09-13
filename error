@@ -1,0 +1,64 @@
+Running with gitlab-runner 15.3.0 (bbcb5aba)
+  on backup-shared-runner B8XJyBdS
+Preparing the "docker" executor
+00:02
+Using Docker executor with image generic-c ...
+Using docker image sha256:769318d234b926eb7c9d18f4eb9e46741e6de1fc461737241914fec792c03cc4 for generic-c ...
+Preparing environment
+00:01
+Running on runner-b8xjybds-project-7606-concurrent-0 via blog...
+Getting source from Git repository
+00:01
+Fetching changes with git depth set to 50...
+Reinitialized existing Git repository in /builds/ArtemZen/assignment-1-io-library/.git/
+Checking out 4e979619 as master...
+Removing parse_int.asm
+Removing parse_uint.asm
+Removing print_char.asm
+Removing print_int.asm
+Removing print_string.asm
+Removing print_uint.asm
+Removing read_char.asm
+Removing read_word.asm
+Removing read_word_length.asm
+Removing read_word_too_long.asm
+Removing report.xml
+Removing string_copy.asm
+Removing string_copy_too_long.asm
+Removing string_equals.asm
+Removing string_length.asm
+Removing string_not_equals.asm
+Skipping Git submodules setup
+Executing "step_script" stage of the job script
+00:02
+Using docker image sha256:769318d234b926eb7c9d18f4eb9e46741e6de1fc461737241914fec792c03cc4 for generic-c ...
+$ ./test.py
+Running tests...
+----------------------------------------------------------------------
+FF.F.F.........
+======================================================================
+ERROR [0.134s]: test_parse_int (__main__.IOLibraryTest)
+----------------------------------------------------------------------
+AssertionError: segmentation fault
+======================================================================
+ERROR [0.165s]: test_parse_uint (__main__.IOLibraryTest)
+----------------------------------------------------------------------
+AssertionError: segmentation fault
+======================================================================
+ERROR [0.156s]: test_print_int (__main__.IOLibraryTest)
+----------------------------------------------------------------------
+AssertionError: segmentation fault
+======================================================================
+ERROR [0.166s]: test_print_uint (__main__.IOLibraryTest)
+----------------------------------------------------------------------
+AssertionError: segmentation fault
+----------------------------------------------------------------------
+Ran 15 tests in 1.539s
+FAILED (errors=4)
+Generating XML reports...
+Uploading artifacts for failed job
+00:02
+Uploading artifacts...
+report.xml: found 1 matching files and directories 
+Uploading artifacts as "junit" to coordinator... 201 Created  id=58289 responseStatus=201 Created token=Ycj6--Dv
+Cleaning up project directory and file based variables
